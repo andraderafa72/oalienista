@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #121214;
+}
+
+nav, ul {
+  list-style: none;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+h1, h2 {
+  font-family: 'Oswald', serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+a:hover {
+  -webkit-filter: brightness(0.95);
+          filter: brightness(0.95);
+}
+
+p, span, a {
+  font-family: 'Quattrocento', serif;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 6rem;
+  width: 100vw;
+  -webkit-box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.16);
+}
+
+header .wrapper {
+  max-width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header .wrapper img {
+  max-width: 20%;
+}
+
+header .wrapper > nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 70%;
+}
+
+header .wrapper > nav a {
+  padding: .5rem .25rem;
+}
+
+header .wrapper > nav a.active, header .wrapper > nav a:hover {
+  border-bottom: 1px solid #000;
+}
+
+main {
+  width: 100%;
+}
+
+main .hero {
+  margin: 0 auto;
+  max-width: 1280px;
+  min-height: calc(100vh - 5rem);
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .hero h1 {
+  text-transform: uppercase;
+  line-height: 120%;
+}
+
+main .hero img {
+  max-width: 33%;
+}
+
+main .hero .content {
+  max-width: 32%;
+  text-align: center;
+}
+
+main .hero a {
+  background: #2E2E2E;
+  display: block;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 280px;
+  color: #fff;
+  margin: 5rem auto 0;
+  border-radius: 1.5rem;
+}
+
+main .por-que-psicoterapia {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 992px;
+  padding: 2rem;
+}
+
+main .por-que-psicoterapia h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+main .por-que-psicoterapia p {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 155%;
+}
+
+main .por-que-psicoterapia a {
+  display: block;
+  padding: 1rem 2rem;
+  text-align: center;
+  width: 280px;
+  background: #0095CB;
+  color: #fff;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  header .wrapper img {
+    max-width: 100%;
+    max-height: 6rem;
+  }
+  header .wrapper nav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  main .hero {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 2rem 10%;
+  }
+  main .hero .content {
+    max-width: 100%;
+  }
+  main .hero img {
+    max-width: 49.5%;
+  }
+  main .hero .content {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  main .hero img {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  main .hero .content + img {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

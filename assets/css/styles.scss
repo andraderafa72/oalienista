@@ -1,0 +1,197 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  color: #121214;
+}
+
+nav, ul{
+  list-style: none;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  @media(max-width: 1080px) {
+    font-size: 93.75%;
+  }
+  @media(max-width: 768px) {
+    font-size: 87.5%;
+  }
+}
+
+h1, h2{
+  font-family: 'Oswald', serif;
+  font-weight: normal;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 1.75rem;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+  transition: .2s;
+
+  &:hover{
+    filter: brightness(.95);
+  }
+}
+
+p, span, a{
+  font-family: 'Quattrocento', serif;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
+  width: 100vw;
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.16);
+  .wrapper{
+    max-width: 1280px;
+    // width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    img{
+      max-width: 20%;
+    }
+ 
+    > nav{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      max-width: 70%;
+
+      a{
+        padding: .5rem .25rem;
+      }
+      a.active, a:hover{
+        border-bottom: 1px solid #000;
+      }
+    }
+  }
+
+}
+
+main{
+  width: 100%;
+  .hero{
+    // width: 100%;
+    margin: 0 auto;
+    max-width: 1280px;
+    min-height: calc(100vh - 5rem);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1{
+      text-transform: uppercase;
+      line-height: 120%;
+    }
+
+    img{
+      max-width: 33%;
+    }
+    
+    .content{
+      max-width: 32%;
+      text-align: center;
+    }
+
+    a{
+      background: #2E2E2E;
+      display: block;
+      padding: 1rem 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      width: 280px;
+      color: #fff;
+      margin: 5rem auto 0;
+      border-radius: 1.5rem;
+    }
+  }
+
+  .por-que-psicoterapia{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 992px;
+    padding: 2rem;
+
+    h2{
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    p{
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      line-height: 155%;
+    }
+
+    a{
+      display: block;
+      padding: 1rem 2rem;
+      text-align: center;
+      width: 280px;
+      background: #0095CB;
+      color: #fff;
+      margin: 0 auto;
+      border-radius: 1.5rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media(max-width:1024px){
+  header{
+    .wrapper{
+      img{
+        max-width: 100%;
+        max-height: 6rem;
+      }
+      nav{
+        display: none;
+      }
+    }
+  }
+}
+
+@media(max-width: 768px){
+  main{
+    .hero{
+      flex-wrap: wrap;
+      padding: 2rem 10%;
+      .content{
+        max-width: 100%;
+      }
+    
+      img{
+        max-width: 49.5%;
+      }
+    
+      .content{
+        order: 1;
+      }
+      img{
+        order: 2;
+      }
+      .content + img {
+        order: 3;
+      }
+    }
+  }
+}
