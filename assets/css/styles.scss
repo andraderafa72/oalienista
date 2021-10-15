@@ -1,59 +1,61 @@
-@import '_burger';
+@import "_burger";
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   color: #121214;
-  background: #Fafafa;
 }
 
-nav{
+nav {
   list-style: none;
 }
 
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  @media(max-width: 1080px) {
+  @media (max-width: 1080px) {
     font-size: 93.75%;
   }
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 87.5%;
   }
 }
 
-h1, h2{
-  font-family: 'Oswald', serif;
+h1,
+h2{
+  font-family: "Oswald", serif;
   font-weight: normal;
 }
 
-h1{
+h1 {
   font-size: 3rem;
 }
 
-h2{
-  font-size: 1.75rem;
+h2 {
+  font-size: 2rem;
 }
 
-a{
+a {
   text-decoration: none;
   color: #000;
-  transition: .2s;
+  transition: 0.2s;
 
-  &:hover{
-    filter: brightness(.95);
+  &:hover {
+    filter: brightness(0.95);
   }
 }
 
-p, span, a{
-  font-family: 'Quattrocento', serif;
+p,
+span,
+a {
+  font-family: "Quattrocento", serif;
 }
 
-header{
+header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,13 +66,13 @@ header{
   height: 6rem;
   width: 100vw;
   background: #fff;
-  transition: .2s;
-  
-  &.shadow{
+  transition: 0.2s;
+
+  &.shadow {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.12);
   }
 
-  .wrapper{
+  .wrapper {
     max-width: 1440px;
     padding: 0 2rem;
     width: 100%;
@@ -78,32 +80,32 @@ header{
     align-items: center;
     justify-content: space-between;
 
-    img{
+    img {
       max-width: 20%;
     }
- 
-    > nav{
+
+    > nav {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       max-width: 70%;
 
-      a{
-        padding: .5rem .25rem;
+      a {
+        padding: 0.5rem 0.25rem;
       }
-      a.active, a:hover{
+      a.active,
+      a:hover {
         border-bottom: 1px solid #000;
       }
     }
   }
-
 }
 
-main{
+main {
   width: 100%;
   margin-top: 6rem;
   padding: 2rem;
-  .hero{
+  .hero {
     // width: 100%;
     margin: 0 auto;
     max-width: 1280px;
@@ -112,25 +114,25 @@ main{
     justify-content: space-between;
     align-items: center;
 
-    h1{
+    h1 {
       text-transform: uppercase;
       line-height: 120%;
     }
 
-    img{
+    img {
       max-width: 33.25%;
       height: 100%;
       max-height: 80vh;
       object-fit: cover;
     }
-    
-    .content{
+
+    .content {
       max-width: 32%;
       text-align: center;
     }
 
-    a{
-      background: #2E2E2E;
+    a {
+      background: #2e2e2e;
       display: block;
       padding: 1rem 2rem;
       text-align: center;
@@ -142,79 +144,147 @@ main{
     }
   }
 
-  .por-que-psicoterapia{
+  .por-que-psicoterapia {
     width: 100%;
     margin: 1rem auto 3rem;
     max-width: 992px;
     padding: 4rem;
 
-    h2{
+    h2 {
       text-align: center;
       margin-bottom: 2rem;
     }
 
-    p{
+    p {
       text-align: center;
       margin-bottom: 1rem;
       font-size: 1.1rem;
       line-height: 155%;
     }
 
-    a{
+    a {
       display: block;
       padding: 1rem 2rem;
       text-align: center;
       width: 280px;
-      background: #0095CB;
+      background: #0095cb;
       color: #fff;
       margin: 0 auto;
       border-radius: 1.5rem;
       text-transform: uppercase;
     }
   }
+
+  .psicanalise,
+  .como-funciona,
+  .quando-procurar {
+    margin: 0 auto;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: justify;
+    gap: 3rem;
+
+    p{
+      line-height: 150%;
+    }
+
+    h2{
+      // margin: 0 1.5rem 3rem;
+      line-height: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .image{
+      img{
+        width: 550px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .como-funciona{
+    margin-top: 5rem;
+  }
+  .quando-procurar{
+    margin-top: 5rem;
+    ul{
+      margin: 2rem;
+      letter-spacing: 1px;
+      font-family: 'Quattrocento', serif;
+      font-weight: bold;
+    }
+  }
+
+  .atendimento {
+    margin: 0 auto;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .content {
+      max-width: 700px;
+      text-align: center;
+
+      p {
+        margin-top: 2rem;
+        font-size: 1.15rem;
+        line-height: 155%;
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+    .image {
+      img {
+        max-width: 450px;
+      }
+    }
+  }
 }
 
-@media(max-width:1024px){
-  header{
-    .wrapper{
-      img{
+@media (max-width: 1024px) {
+  header {
+    .wrapper {
+      img {
         max-width: 100%;
         max-height: 6rem;
       }
-      nav{
+      nav {
         display: none;
       }
     }
   }
-  main{
-    .hero{
+  main {
+    .hero {
       flex-wrap: wrap;
       padding: 2rem 10%;
-      .content{
+      .content {
         max-width: 100%;
       }
-    
-      img{
+
+      img {
         max-width: 49.5%;
         width: 49.5%;
       }
-    
-      .content{
+
+      .content {
         order: 1;
         margin-top: 2rem;
       }
-      img{
+      img {
         order: 2;
         margin-top: 4rem;
       }
       .content + img {
         order: 3;
         border: 1px solid #ccc;
-        
       }
     }
   }
 }
 
-@media(max-width: 768px){
+@media (max-width: 768px) {
 }

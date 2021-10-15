@@ -187,7 +187,6 @@
 
 body {
   color: #121214;
-  background: #Fafafa;
 }
 
 nav {
@@ -211,8 +210,9 @@ html {
   }
 }
 
-h1, h2 {
-  font-family: 'Oswald', serif;
+h1,
+h2 {
+  font-family: "Oswald", serif;
   font-weight: normal;
 }
 
@@ -221,14 +221,14 @@ h1 {
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 2rem;
 }
 
 a {
   text-decoration: none;
   color: #000;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 a:hover {
@@ -236,8 +236,10 @@ a:hover {
           filter: brightness(0.95);
 }
 
-p, span, a {
-  font-family: 'Quattrocento', serif;
+p,
+span,
+a {
+  font-family: "Quattrocento", serif;
 }
 
 header {
@@ -257,8 +259,8 @@ header {
   height: 6rem;
   width: 100vw;
   background: #fff;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 header.shadow {
@@ -296,10 +298,11 @@ header .wrapper > nav {
 }
 
 header .wrapper > nav a {
-  padding: .5rem .25rem;
+  padding: 0.5rem 0.25rem;
 }
 
-header .wrapper > nav a.active, header .wrapper > nav a:hover {
+header .wrapper > nav a.active,
+header .wrapper > nav a:hover {
   border-bottom: 1px solid #000;
 }
 
@@ -343,7 +346,7 @@ main .hero .content {
 }
 
 main .hero a {
-  background: #2E2E2E;
+  background: #2e2e2e;
   display: block;
   padding: 1rem 2rem;
   text-align: center;
@@ -378,11 +381,98 @@ main .por-que-psicoterapia a {
   padding: 1rem 2rem;
   text-align: center;
   width: 280px;
-  background: #0095CB;
+  background: #0095cb;
   color: #fff;
   margin: 0 auto;
   border-radius: 1.5rem;
   text-transform: uppercase;
+}
+
+main .psicanalise,
+main .como-funciona,
+main .quando-procurar {
+  margin: 0 auto;
+  max-width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: justify;
+  gap: 3rem;
+}
+
+main .psicanalise p,
+main .como-funciona p,
+main .quando-procurar p {
+  line-height: 150%;
+}
+
+main .psicanalise h2,
+main .como-funciona h2,
+main .quando-procurar h2 {
+  line-height: 100%;
+  margin-bottom: 2rem;
+}
+
+main .psicanalise .image img,
+main .como-funciona .image img,
+main .quando-procurar .image img {
+  width: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .como-funciona {
+  margin-top: 5rem;
+}
+
+main .quando-procurar {
+  margin-top: 5rem;
+}
+
+main .quando-procurar ul {
+  margin: 2rem;
+  letter-spacing: 1px;
+  font-family: 'Quattrocento', serif;
+  font-weight: bold;
+}
+
+main .atendimento {
+  margin: 0 auto;
+  max-width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .atendimento .content {
+  max-width: 700px;
+  text-align: center;
+}
+
+main .atendimento .content p {
+  margin-top: 2rem;
+  font-size: 1.15rem;
+  line-height: 155%;
+}
+
+main .atendimento .content span {
+  font-weight: bold;
+}
+
+main .atendimento .image img {
+  max-width: 450px;
 }
 
 @media (max-width: 1024px) {
