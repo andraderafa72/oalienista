@@ -76,15 +76,18 @@ header {
 }
 
 header .wrapper {
-  max-width: 1280px;
+  max-width: 1440px;
+  padding: 0 2rem;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header .wrapper img {
@@ -135,7 +138,11 @@ main .hero h1 {
 }
 
 main .hero img {
-  max-width: 33%;
+  max-width: 33.25%;
+  height: 100%;
+  max-height: 80vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main .hero .content {
@@ -157,9 +164,9 @@ main .hero a {
 
 main .por-que-psicoterapia {
   width: 100%;
-  margin: 0 auto;
+  margin: 1rem auto 3rem;
   max-width: 992px;
-  padding: 2rem;
+  padding: 4rem;
 }
 
 main .por-que-psicoterapia h2 {
@@ -194,9 +201,6 @@ main .por-que-psicoterapia a {
   header .wrapper nav {
     display: none;
   }
-}
-
-@media (max-width: 768px) {
   main .hero {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -212,16 +216,19 @@ main .por-que-psicoterapia a {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    margin-top: 2rem;
   }
   main .hero img {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    margin-top: 4rem;
   }
   main .hero .content + img {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
+    border: 1px solid #ccc;
   }
 }
 /*# sourceMappingURL=styles.css.map */
