@@ -11,7 +11,7 @@ body{
   background: #Fafafa;
 }
 
-nav, ul{
+nav{
   list-style: none;
 }
 
@@ -101,12 +101,13 @@ header{
 
 main{
   width: 100%;
+  margin-top: 6rem;
+  padding: 2rem;
   .hero{
     // width: 100%;
-    margin: 5rem auto 0;
+    margin: 0 auto;
     max-width: 1280px;
     min-height: 100vh;
-    padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

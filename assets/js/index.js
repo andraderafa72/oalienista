@@ -9,6 +9,7 @@ burgerToggle.addEventListener('click', e =>{
   } else {
     burgerToggle.classList.add('is-active');
     burgerMenu.classList.add('visible');
+    header.classList.remove('shadow')
   }
 })
 

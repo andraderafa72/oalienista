@@ -190,7 +190,7 @@ body {
   background: #Fafafa;
 }
 
-nav, ul {
+nav {
   list-style: none;
 }
 
@@ -305,13 +305,14 @@ header .wrapper > nav a.active, header .wrapper > nav a:hover {
 
 main {
   width: 100%;
+  margin-top: 6rem;
+  padding: 2rem;
 }
 
 main .hero {
-  margin: 5rem auto 0;
+  margin: 0 auto;
   max-width: 1280px;
   min-height: 100vh;
-  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
