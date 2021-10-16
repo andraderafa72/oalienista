@@ -193,6 +193,14 @@ nav {
   list-style: none;
 }
 
+ul {
+  margin: 2rem;
+}
+
+ul li + li {
+  margin-top: 0.5rem;
+}
+
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -388,8 +396,38 @@ main .por-que-psicoterapia a {
   text-transform: uppercase;
 }
 
+main .social-media {
+  max-width: 600px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+main .social-media nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+main .social-media nav img {
+  width: 3rem;
+  height: 3rem;
+}
+
 main .psicanalise,
 main .como-funciona,
+main .sobre-mim,
+main .contato,
+main .security,
 main .quando-procurar {
   margin: 0 auto;
   max-width: 1280px;
@@ -408,12 +446,18 @@ main .quando-procurar {
 
 main .psicanalise p,
 main .como-funciona p,
+main .sobre-mim p,
+main .contato p,
+main .security p,
 main .quando-procurar p {
   line-height: 150%;
 }
 
 main .psicanalise h2,
 main .como-funciona h2,
+main .sobre-mim h2,
+main .contato h2,
+main .security h2,
 main .quando-procurar h2 {
   line-height: 100%;
   margin-bottom: 2rem;
@@ -421,22 +465,56 @@ main .quando-procurar h2 {
 
 main .psicanalise .image img,
 main .como-funciona .image img,
+main .sobre-mim .image img,
+main .contato .image img,
+main .security .image img,
 main .quando-procurar .image img {
   width: 550px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 16px;
+}
+
+main .sobre-mim {
+  max-width: 1080px;
+  margin-top: 6rem;
+}
+
+main .sobre-mim .image img {
+  width: 400px;
+}
+
+main .contato {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  margin-top: 7rem;
+}
+
+main .contato h2 {
+  font-size: 3rem;
+}
+
+main .contato p {
+  font-weight: 600;
 }
 
 main .como-funciona {
-  margin-top: 5rem;
+  margin-top: 7rem;
 }
 
 main .quando-procurar {
-  margin-top: 5rem;
+  margin-top: 7rem;
+}
+
+main .quando-procurar .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main .quando-procurar ul {
-  margin: 2rem;
   letter-spacing: 1px;
   font-family: 'Quattrocento', serif;
   font-weight: bold;
@@ -482,6 +560,35 @@ main .atendimento .image img {
   }
   header .wrapper nav {
     display: none;
+  }
+  main .psicanalise,
+  main .como-funciona,
+  main .sobre-mim,
+  main .contato,
+  main .security,
+  main .quando-procurar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .psicanalise .image img,
+  main .como-funciona .image img,
+  main .sobre-mim .image img,
+  main .contato .image img,
+  main .security .image img,
+  main .quando-procurar .image img {
+    width: 100%;
+  }
+  main .quando-procurar .content, main .security .content {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  main .quando-procurar .image, main .security .image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
   main .hero {
     -ms-flex-wrap: wrap;
