@@ -367,9 +367,8 @@ main .hero a {
 
 main .por-que-psicoterapia {
   width: 100%;
-  margin: 1rem auto 3rem;
+  margin: 8rem auto 5rem;
   max-width: 992px;
-  padding: 4rem;
 }
 
 main .por-que-psicoterapia h2 {
@@ -645,7 +644,6 @@ main .atendimento .image img {
   main .hero {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 2rem 10%;
   }
   main .hero .content {
     max-width: 100%;
@@ -671,6 +669,29 @@ main .atendimento .image img {
         -ms-flex-order: 3;
             order: 3;
     border: 1px solid #ccc;
+  }
+}
+
+@media (max-width: 425px) {
+  main .hero img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 2rem;
+  }
+  header .wrapper img {
+    max-width: 200px;
+    max-height: 4rem;
+  }
+  main {
+    padding: 1rem;
+  }
+  main .hero a, main .por-que-psicoterapia a {
+    width: 180px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
