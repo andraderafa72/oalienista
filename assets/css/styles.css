@@ -367,9 +367,8 @@ main .hero a {
 
 main .por-que-psicoterapia {
   width: 100%;
-  margin: 1rem auto 3rem;
+  margin: 8rem auto 5rem;
   max-width: 992px;
-  padding: 4rem;
 }
 
 main .por-que-psicoterapia h2 {
@@ -645,7 +644,6 @@ main .atendimento .image img {
   main .hero {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 2rem 10%;
   }
   main .hero .content {
     max-width: 100%;
