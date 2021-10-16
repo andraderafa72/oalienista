@@ -1,0 +1,697 @@
+.hamburger {
+  padding: 15px 15px;
+  display: none;
+  cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
+}
+
+.hamburger-box {
+  width: 32px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 32px;
+  height: 4px;
+  background-color: #121214;
+  border-radius: 4px;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger--collapse .hamburger-inner {
+  top: auto;
+  bottom: 0;
+  -webkit-transition-duration: 0.13s;
+          transition-duration: 0.13s;
+  -webkit-transition-delay: 0.13s;
+          transition-delay: 0.13s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse .hamburger-inner::after {
+  top: -20px;
+  -webkit-transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+
+.hamburger--collapse .hamburger-inner::before {
+  -webkit-transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse.is-active .hamburger-inner {
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+          transform: translate3d(0, -10px, 0) rotate(-45deg);
+  -webkit-transition-delay: 0.22s;
+          transition-delay: 0.22s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--collapse.is-active .hamburger-inner::after {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+}
+
+.hamburger--collapse.is-active .hamburger-inner::before {
+  top: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.burger-menu {
+  position: fixed;
+  top: -25rem;
+  right: 0;
+  background: #fff;
+  width: 100%;
+  z-index: 0;
+  -webkit-box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.08);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.burger-menu nav {
+  margin: 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.burger-menu nav a {
+  font-size: 1.25rem;
+  padding: .5rem 1rem;
+  display: inline-block;
+  opacity: .9;
+}
+
+.burger-menu nav a.active {
+  opacity: 1;
+  border-bottom: 1px solid #000;
+  font-weight: 600;
+}
+
+.burger-menu.visible {
+  top: 6rem;
+}
+
+@media (max-width: 1080px) {
+  .hamburger {
+    display: inline-block;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #121214;
+}
+
+nav {
+  list-style: none;
+}
+
+ul {
+  margin: 2rem;
+}
+
+ul li + li {
+  margin-top: 0.5rem;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+h1,
+h2 {
+  font-family: "Oswald", serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+a:hover {
+  -webkit-filter: brightness(0.95);
+          filter: brightness(0.95);
+}
+
+p,
+span,
+a {
+  font-family: "Quattrocento", serif;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  height: 6rem;
+  width: 100vw;
+  background: #fff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+header.shadow {
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.12);
+}
+
+header .wrapper {
+  max-width: 1440px;
+  padding: 0 2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .wrapper img {
+  max-width: 20%;
+}
+
+header .wrapper > nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 70%;
+}
+
+header .wrapper > nav a {
+  padding: 0.5rem 0.25rem;
+}
+
+header .wrapper > nav a.active,
+header .wrapper > nav a:hover {
+  border-bottom: 1px solid #000;
+}
+
+main {
+  width: 100%;
+  margin-top: 6rem;
+  padding: 2rem;
+}
+
+main .hero {
+  margin: 0 auto;
+  max-width: 1280px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .hero h1 {
+  text-transform: uppercase;
+  line-height: 120%;
+}
+
+main .hero img {
+  max-width: 33.25%;
+  height: 100%;
+  max-height: 80vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .hero .content {
+  max-width: 32%;
+  text-align: center;
+}
+
+main .hero a {
+  background: #2e2e2e;
+  display: block;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 280px;
+  color: #fff;
+  margin: 5rem auto 0;
+  border-radius: 1.5rem;
+}
+
+main .por-que-psicoterapia {
+  width: 100%;
+  margin: 8rem auto 5rem;
+  max-width: 992px;
+}
+
+main .por-que-psicoterapia h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+main .por-que-psicoterapia p {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 155%;
+}
+
+main .por-que-psicoterapia a {
+  display: block;
+  padding: 1rem 2rem;
+  text-align: center;
+  width: 280px;
+  background: #0095cb;
+  color: #fff;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  text-transform: uppercase;
+}
+
+main .social-media {
+  max-width: 600px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+main .social-media nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+main .social-media nav img {
+  width: 3rem;
+  height: 3rem;
+}
+
+main .psicanalise,
+main .como-funciona,
+main .sobre-mim,
+main .contato,
+main .security,
+main .downloads,
+main .quando-procurar {
+  margin: 0 auto;
+  max-width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: justify;
+  gap: 3rem;
+}
+
+main .psicanalise p,
+main .como-funciona p,
+main .sobre-mim p,
+main .contato p,
+main .security p,
+main .downloads p,
+main .quando-procurar p {
+  line-height: 150%;
+}
+
+main .psicanalise h2,
+main .como-funciona h2,
+main .sobre-mim h2,
+main .contato h2,
+main .security h2,
+main .downloads h2,
+main .quando-procurar h2 {
+  line-height: 100%;
+  margin-bottom: 2rem;
+}
+
+main .psicanalise .image,
+main .como-funciona .image,
+main .sobre-mim .image,
+main .contato .image,
+main .security .image,
+main .downloads .image,
+main .quando-procurar .image {
+  width: 100%;
+}
+
+main .psicanalise .image img,
+main .como-funciona .image img,
+main .sobre-mim .image img,
+main .contato .image img,
+main .security .image img,
+main .downloads .image img,
+main .quando-procurar .image img {
+  width: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+}
+
+main .sobre-mim {
+  max-width: 1080px;
+  margin-top: 6rem;
+}
+
+main .sobre-mim .image {
+  width: auto;
+}
+
+main .sobre-mim .image img {
+  width: 400px;
+}
+
+main .contato, main .downloads {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  margin-top: 7rem;
+}
+
+main .contato h2, main .downloads h2 {
+  font-size: 3rem;
+}
+
+main .contato p, main .downloads p {
+  font-weight: 600;
+}
+
+main .downloads .livros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .downloads .livros a:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+main .downloads .livros h3 {
+  text-align: center;
+  margin: .25rem 0 1.5rem;
+}
+
+main .downloads .livros img {
+  width: 230px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .como-funciona {
+  margin-top: 7rem;
+}
+
+main .quando-procurar {
+  margin-top: 7rem;
+}
+
+main .quando-procurar .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .quando-procurar ul {
+  letter-spacing: 1px;
+  font-family: 'Quattrocento', serif;
+  font-weight: bold;
+}
+
+main .atendimento {
+  margin: 0 auto;
+  max-width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .atendimento .content {
+  max-width: 700px;
+  text-align: center;
+}
+
+main .atendimento .content p {
+  margin-top: 2rem;
+  font-size: 1.15rem;
+  line-height: 155%;
+}
+
+main .atendimento .content span {
+  font-weight: bold;
+}
+
+main .atendimento .image img {
+  max-width: 450px;
+}
+
+@media (max-width: 1024px) {
+  header .wrapper img {
+    max-width: 100%;
+    max-height: 6rem;
+  }
+  header .wrapper nav {
+    display: none;
+  }
+  main .psicanalise,
+  main .como-funciona,
+  main .sobre-mim,
+  main .contato,
+  main .security,
+  main .quando-procurar,
+  main .atendimento {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .psicanalise .image img,
+  main .como-funciona .image img,
+  main .sobre-mim .image img,
+  main .contato .image img,
+  main .security .image img,
+  main .quando-procurar .image img,
+  main .atendimento .image img {
+    width: 100%;
+  }
+  main .atendimento + .atendimento {
+    margin-top: 5rem;
+  }
+  main .quando-procurar .content, main .security .content, main .atendimento + .atendimento .content {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  main .quando-procurar .image, main .security .image, main .atendimento + .atendimento .image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  main .hero {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .hero .content {
+    max-width: 100%;
+  }
+  main .hero img {
+    max-width: 49.5%;
+    width: 49.5%;
+  }
+  main .hero .content {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: 2rem;
+  }
+  main .hero img {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 4rem;
+  }
+  main .hero .content + img {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    border: 1px solid #ccc;
+  }
+}
+
+@media (max-width: 425px) {
+  main .hero img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 2rem;
+  }
+  header .wrapper img {
+    max-width: 200px;
+    max-height: 4rem;
+  }
+  main {
+    padding: 1rem;
+  }
+  main .hero a, main .por-que-psicoterapia a {
+    width: 180px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
