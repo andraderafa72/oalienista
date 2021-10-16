@@ -349,7 +349,8 @@ main {
       .sobre-mim, 
       .contato,
       .security,
-      .quando-procurar {
+      .quando-procurar,
+      .atendimento {
         flex-direction: column;
 
         .image img{
@@ -357,7 +358,10 @@ main {
         }
       }
 
-      .quando-procurar, .security{
+      .atendimento + .atendimento{
+        margin-top: 5rem;
+      }
+      .quando-procurar, .security, .atendimento + .atendimento{
         .content {
           order: 2;
         }
