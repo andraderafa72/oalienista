@@ -463,6 +463,15 @@ main .quando-procurar h2 {
   margin-bottom: 2rem;
 }
 
+main .psicanalise .image,
+main .como-funciona .image,
+main .sobre-mim .image,
+main .contato .image,
+main .security .image,
+main .quando-procurar .image {
+  width: 100%;
+}
+
 main .psicanalise .image img,
 main .como-funciona .image img,
 main .sobre-mim .image img,
