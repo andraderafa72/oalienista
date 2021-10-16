@@ -428,6 +428,7 @@ main .como-funciona,
 main .sobre-mim,
 main .contato,
 main .security,
+main .downloads,
 main .quando-procurar {
   margin: 0 auto;
   max-width: 1280px;
@@ -449,6 +450,7 @@ main .como-funciona p,
 main .sobre-mim p,
 main .contato p,
 main .security p,
+main .downloads p,
 main .quando-procurar p {
   line-height: 150%;
 }
@@ -458,6 +460,7 @@ main .como-funciona h2,
 main .sobre-mim h2,
 main .contato h2,
 main .security h2,
+main .downloads h2,
 main .quando-procurar h2 {
   line-height: 100%;
   margin-bottom: 2rem;
@@ -468,6 +471,7 @@ main .como-funciona .image,
 main .sobre-mim .image,
 main .contato .image,
 main .security .image,
+main .downloads .image,
 main .quando-procurar .image {
   width: 100%;
 }
@@ -477,6 +481,7 @@ main .como-funciona .image img,
 main .sobre-mim .image img,
 main .contato .image img,
 main .security .image img,
+main .downloads .image img,
 main .quando-procurar .image img {
   width: 550px;
   -o-object-fit: cover;
@@ -489,11 +494,15 @@ main .sobre-mim {
   margin-top: 6rem;
 }
 
+main .sobre-mim .image {
+  width: auto;
+}
+
 main .sobre-mim .image img {
   width: 400px;
 }
 
-main .contato {
+main .contato, main .downloads {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -502,12 +511,41 @@ main .contato {
   margin-top: 7rem;
 }
 
-main .contato h2 {
+main .contato h2, main .downloads h2 {
   font-size: 3rem;
 }
 
-main .contato p {
+main .contato p, main .downloads p {
   font-weight: 600;
+}
+
+main .downloads .livros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .downloads .livros a:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+main .downloads .livros h3 {
+  text-align: center;
+  margin: .25rem 0 1.5rem;
+}
+
+main .downloads .livros img {
+  width: 230px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main .como-funciona {

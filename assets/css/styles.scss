@@ -199,12 +199,13 @@ main {
       }
     }
   }
-
+  
   .psicanalise,
   .como-funciona,
   .sobre-mim,
   .contato,
   .security,
+  .downloads,
   .quando-procurar {
     margin: 0 auto;
     max-width: 1280px;
@@ -237,12 +238,16 @@ main {
   .sobre-mim {
     max-width: 1080px;
     margin-top: 6rem;
-    .image img {
-      width: 400px;
+
+    .image {
+      width: auto;
+      img {
+        width: 400px;
+      }
     }
   }
 
-  .contato{
+  .contato, .downloads{
     flex-direction: column;
     gap: 1rem;
     margin-top: 7rem;
@@ -255,9 +260,35 @@ main {
       font-weight: 600;
     }
   }
+
+  .downloads{
+    .livros{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-evenly;
+
+      a:hover{
+        filter: brightness(.9);
+      }
+
+      h3{
+        text-align: center;
+        margin: .25rem 0 1.5rem;
+      }
+
+      img{
+        width: 230px;
+        height: 400px;
+        object-fit: cover;
+      }
+    }
+  }
+
   .como-funciona{
     margin-top: 7rem;
   }
+
   .quando-procurar{
     margin-top: 7rem;
 
